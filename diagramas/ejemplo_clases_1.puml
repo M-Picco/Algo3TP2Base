@@ -1,0 +1,18 @@
+@startuml
+
+ServidorDeLeche <|-- ServidorDeLecheEntera
+ServidorDeLeche <|-- ServidorDeLecheDeAlmendra
+
+ServidorDeLeche : {abstract} servirLecheEnVaso: unVaso
+
+HacedorDeCafe <|-- HacedorDeCafeComun
+HacedorDeCafe <|-- HacedorDeCafeDescafeinado
+
+HacedorDeCafe : {abstract} servirCafeEnVaso: unVaso
+
+MaquinaDeCafe : {abstract} prepararCafeConLecheEnVaso: unVaso
+
+MaquinaDeCafe *-- HacedorDeCafe
+MaquinaDeCafe *-- ServidorDeLeche
+
+@enduml

@@ -1,0 +1,10 @@
+@startuml
+
+hide footbox
+actor Alan
+
+Alan -> MaquinaDeCafe: prepararCafeConLecheEnVaso: unVaso
+MaquinaDeCafe -> HacedorDeCafeComun: servirCafeEnVaso: unVaso
+MaquinaDeCafe -> ServidorDeLecheDeAlmendra: servirLecheEnVaso: unVaso
+
+@enduml
